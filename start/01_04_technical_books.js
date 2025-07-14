@@ -31,3 +31,21 @@ class Book {
 }
 
 // Write your code here
+
+class technicalBooks extends Book {
+  constructor(title,author, ISBN, numCopies, edition){
+    super(title, author, ISBN, numCopies);
+    this.edition = edition
+  }
+
+  getEdition(){
+      return `The current version of this book is ${this.edition}`
+  }
+}
+
+const cleanCode = new technicalBooks("Clean Code", "Robert Cecil Martin",
+  "23416", 10, 2008
+)
+
+console.log(cleanCode.availability)
+console.log(cleanCode.getEdition())
